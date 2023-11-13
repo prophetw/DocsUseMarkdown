@@ -1,0 +1,16 @@
+/node_modules
+/.env.local
+/.umirc.local.ts
+/config/config.local.ts
+/src/.umi
+/src/.umi-production
+/src/.umi-test
+/.umi
+/.umi-production
+/.umi-test
+/dist
+/.mfsu
+.swc
+public/Updates/v1.5.0
+public/Updates/v1.4.3
+public/Updates/v1.3.1

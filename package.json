@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "author": "wangwei <532300391@qq.com>",
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "format": "prettier --cache --write .",
+    "prepare": "husky install",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@ant-design/pro-components": "^2.4.4",
+    "@types/markdown-it": "^13.0.6",
+    "@umijs/max": "^4.0.88",
+    "antd": "^5.4.0",
+    "axios": "^1.6.1",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^13.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.0.3"
+  }
+}
