@@ -1,3 +1,5 @@
+[Check on gh-pages](https://prophetw.github.io/DocsUseMarkdown/#/home)
+
 # Start
 ```bash
 # install deps
