@@ -1,0 +1,59 @@
+name: NodeJS with Webpack
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install pnpm -g
+        pnpm install --no-frozen-lockfile
+        pnpm build
+    - if: matrix.node-version == '16.x'
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: dist
+
+
+  deploy_gh_pages:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    name: Deploy czmlEditor to GitHub Pages
+    needs: [build]
+    steps:
+      - name: Download built folder
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: Deploy dist to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          keep_history: true
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
