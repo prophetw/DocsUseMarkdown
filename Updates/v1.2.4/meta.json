@@ -1,0 +1,18 @@
+{
+	"title": "v1.2.4版本更新",
+	"mdFile": "update.md",
+	"downloadAry": [
+		{
+			"name": "MotorSDK_v1.3.1.zip",
+			"url": "MotorSDK_v1.3.1.zip"
+		},
+		{
+			"name": "Server_v1.3.1.zip",
+			"url": "Server_v1.3.1.zip"
+		},
+		{
+			"name": "WebpackDemo.zip",
+			"url": "WebpackDemo.zip"
+		}
+	]
+}
