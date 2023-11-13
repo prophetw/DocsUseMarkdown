@@ -1,7 +1,18 @@
-# README
+# Start
+```bash
+# install deps
+pnpm i
 
-`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://umijs.org/docs/max/introduce)
+# start 
+pnpm start
 
+# build
+pnpm build
+```
+
+# 使用
+> Updates/v1.5.1 按照正常的 markdown 语法编写即可，然后在 Updates/meta.json 里面添加新的版本号即可。
+> 最终会把 markdown 以及静态资源，正确的渲染出来。
 
 
 
